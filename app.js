@@ -22,7 +22,7 @@ function getRandomPhraseAsArray(arr) {
   return arr[randomIndex].split('');
 }
 
-// Add the characters of a phrase to the display container
+// Add the characters of a phrase 
 function addPhraseToDisplay(arr) {
     for (let i = 0; i < arr.length; i++) {
         const li = document.createElement('li');
@@ -52,14 +52,14 @@ function checkLetter(letterButton) {
   return matchingLetter;
 }
 
-// Update the hearts display on each missed guess
+// Update the hearts 
 function updateHearts() {
   hearts[missed].src = "images/lostHeart.png";
   hearts[missed].classList.add("died");
   missed++;
 }
 
-// Check if the player has won or lost and show the respective message
+// Check if the player has won or lost and show message
  function checkWin() {
     const letters = document.getElementsByClassName("letter");
     const shownLetters = document.getElementsByClassName("show");
@@ -74,7 +74,7 @@ function updateHearts() {
       overlay.style.display = "flex";
     }
   }
-// Add event listeners to the qwerty buttons
+// Add event listeners to the qwerty button
 qwerty.addEventListener("click", (event) => {
     if (event.target.tagName === "BUTTON") {
       event.target.classList.add("chosen");
